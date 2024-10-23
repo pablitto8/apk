@@ -1,0 +1,9 @@
+pierwsza czesc
+
+with open("liczby.txt", "r") as file:
+    liczby = file.readlines()
+def czy_unikalne_cyfry(liczba):
+    liczba = liczba.strip()
+    return len(set(liczba)) == len(liczba)
+unikalne_liczby = [liczba for liczba in liczby if czy_unikalne_cyfry(liczba)]
+print(f"Liczba liczb z unikalnymi cyframi: {len(unikalne_liczby)}")
